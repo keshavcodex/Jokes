@@ -5,7 +5,7 @@ const https = require("https");
 const app = express();
 app.use(bodyParser.urlencoded({ extended: true }));
 
-app.get("/", (req, res) => {
+app.get("https://keshavcodex.github.io/jokes/", (req, res) => {
     const url = "https://v2.jokeapi.dev/joke/Programming,Dark,Pun?blacklistFlags=sexist&type=single";
     https.get(url, (response) => {
         response.on("data", function (data) {
